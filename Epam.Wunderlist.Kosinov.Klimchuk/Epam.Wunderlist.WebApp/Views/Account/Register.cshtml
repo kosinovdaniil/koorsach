@@ -1,0 +1,58 @@
+﻿@model Epam.Wunderlist.WebApp.ViewModels.UserRegisterModel
+
+@{
+    Layout = "~/Views/Shared/_ControlLayout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Регистрация";
+}
+
+@section Content {
+    <h4 class="signup">Get Wunderlist free</h4>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-register" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="field">
+            <br />
+            <img src="~/Content/user.png" alt="user" class="img-item"/>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { placeholder = "Name" } })
+            @Html.ValidationMessageFor(model => model.Name, null, new { @class = "text-danger" })
+        </div>
+
+        <hr />
+
+        <div class="field">
+            <img src="~/Content/email.png" alt="Lock" class="img-item"/>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { type = "email", placeholder = "Email" } })
+            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text-danger" })
+        </div>
+
+        <hr />
+        <div class="field">
+            <img src="~/Content/lock.png" alt="Password" class="img-item"/>
+            @Html.PasswordFor(model => model.Password, new { placeholder = "Password" })
+            @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text-danger" })
+        </div>
+
+        <hr />
+
+        <div>
+            <input type="submit" value="Create a free account" class="btn-signin" />
+        </div>
+    }
+
+    <div id="link">
+        Already registered?
+        @Html.ActionLink("Sign in", "LogOn", "Account")
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

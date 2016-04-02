@@ -1,0 +1,47 @@
+﻿@model Epam.Wunderlist.WebApp.ViewModels.UserLoginModel
+
+@{
+    Layout = "~/Views/Shared/_ControlLayout.cshtml";
+}
+
+
+@section Content{
+    @using (Html.BeginForm("LogOn", "Account", FormMethod.Post, new { @class = "form-logon" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div></div>
+
+        <div class="field">
+            <br />
+            <img src="~/Content/email.png" alt="email" class="img-item"/>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = "Email"} })
+            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text-danger" })
+        </div>
+
+        <hr />
+
+        <div class="field">
+            <img src="~/Content/lock.png" alt="Password" class="img-item"/>
+            @Html.PasswordFor(model => model.Password, new { placeholder = "Password" })
+            @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text-danger" })
+        </div>
+
+        <hr />
+
+        <div class="">
+            <input type="submit" value="Sign in" class="btn-signin" />
+
+            <div id="link">
+                @Html.ActionLink("Forgot password?", "Register", "Account")
+            </div>
+        </div>
+    }
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+</head>
+<body>
+    <nav>
+        <div class="col-md-9 hidden-xs">
+            <img src="~/Content/favicon.png" alt="Wunderlist" id="img-icon" />
+            <span>Wunderlist</span>
+            <a href="#" class="nav-link">PRO</a>
+            <a href="#" class="nav-link">BUSINESS</a>
+            <a href="#" class="nav-link">DOWNLOAD</a>
+            <a href="#" class="nav-link">SUPPORT</a>
+            <a href="#" class="nav-link">BLOG</a>
+        </div>
+        <div class="col-md-1 col-xs-4">
+            @Html.ActionLink("Sign In", "LogOn", "Account", null, new { id = "btn-signin" })
+        </div>
+        <div class="col-md-2 col-xs-8">
+            @Html.ActionLink("Create a free account", "Register", "Account", null, new { @class = "btn-create-account" })
+        </div>
+    </nav>
+
+    <main>
+        <div class="main-block">
+            <div class="col-md-offset-1 col-md-5 col-s-12">
+                <h3>Keep your life in sync</h3>
+                <p class="subline">Wunderlist is the easiest way to get stuff done. Whether you’re planning a holiday, sharing a shopping list with a partner or managing multiple work projects, Wunderlist is here to help you tick off all your personal and professional to-dos.</p>
+                <div class="col-md-5">
+                    @Html.ActionLink("Create a free account", "Register", "Account", null, new { @class = "btn-on-main" })
+                </div>
+                <div class="col-md-4">
+                    <input type="submit" value="Download Wunderlist" class="btn-on-main" />
+                </div>
+            </div>
+
+            <div class="col-md-6 col-s-12">
+                <img src="~/Content/mobile.png" alt="Mobile" id="mobile" />
+            </div>
+        </div>
+    </main>
+
+
+
+
+    @*@RenderSection("Scripts", required: false)*@
+</body>
+</html>
