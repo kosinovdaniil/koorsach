@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Epam.Wunderlist.DomainModel\Epam.Wunderlist.DomainModel.csproj">
+    <ProjectReference Include="..\ShopCore.DomainModel\ShopCore.DomainModel.csproj">
       <Project>{9e4869a4-a794-424b-9309-b1d2e2d77399}</Project>
-      <Name>Epam.Wunderlist.DomainModel</Name>
+      <Name>ShopCore.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

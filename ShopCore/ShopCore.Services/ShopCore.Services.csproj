@@ -102,13 +102,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Epam.Wunderlist.DataAccess.Interfaces\Epam.Wunderlist.DataAccess.Interfaces.csproj">
+    <ProjectReference Include="..\ShopCore.DataAccess.Interfaces\ShopCore.DataAccess.Interfaces.csproj">
       <Project>{06204c03-41a1-4567-8edd-88ae0fc4391b}</Project>
-      <Name>Epam.Wunderlist.DataAccess.Interfaces</Name>
+      <Name>ShopCore.DataAccess.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Epam.Wunderlist.DomainModel\Epam.Wunderlist.DomainModel.csproj">
+    <ProjectReference Include="..\ShopCore.DomainModel\ShopCore.DomainModel.csproj">
       <Project>{9e4869a4-a794-424b-9309-b1d2e2d77399}</Project>
-      <Name>Epam.Wunderlist.DomainModel</Name>
+      <Name>ShopCore.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

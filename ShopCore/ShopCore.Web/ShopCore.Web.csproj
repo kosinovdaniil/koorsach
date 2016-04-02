@@ -384,17 +384,17 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Epam.Wunderlist.Common\Epam.Wunderlist.Common.csproj">
+    <ProjectReference Include="..\ShopCore.Common\ShopCore.Common.csproj">
       <Project>{dfbef70e-859f-4567-9297-5168727f050d}</Project>
-      <Name>Epam.Wunderlist.Common</Name>
+      <Name>ShopCore.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Epam.Wunderlist.DomainModel\Epam.Wunderlist.DomainModel.csproj">
+    <ProjectReference Include="..\ShopCore.DomainModel\ShopCore.DomainModel.csproj">
       <Project>{9e4869a4-a794-424b-9309-b1d2e2d77399}</Project>
-      <Name>Epam.Wunderlist.DomainModel</Name>
+      <Name>ShopCore.DomainModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Epam.Wunderlist.Services\Epam.Wunderlist.Services.csproj">
+    <ProjectReference Include="..\ShopCore.Services\ShopCore.Services.csproj">
       <Project>{b2b0b92b-7ac4-49bb-a207-44fd9ccbe07f}</Project>
-      <Name>Epam.Wunderlist.Services</Name>
+      <Name>ShopCore.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
